@@ -56,3 +56,26 @@ int FindMin(int[] numbers)
     return min;
 }
 Console.WriteLine(FindMin(new int[] { 12, 4, 9 }));
+int FindMax(int[] numbers)
+{
+    int max = numbers[0];
+    for (int i = 1; i < numbers.Length; i++)
+    {
+        if (numbers[i] > max)
+        {
+            max = numbers[i];
+        }
+    }
+    return max;
+}
+int FindIndex(int[] numbers, int target)
+{
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        if (numbers[i] == target)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
